@@ -8,7 +8,8 @@
 */
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
-
+const inpares = randomNumbers.filter(inpar => inpar % 2 === 1)
+//console.log(inpares)
 /*
   02
 
@@ -16,7 +17,13 @@ const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 */
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
-
+const lowNumbers = crazyNumbers.reduce((acumulador, crazyNumbers) => {
+  if(crazyNumbers < 501) {
+    return acumulador + 1
+  }
+  return acumulador
+},0)
+console.log(lowNumbers)
 /*
   03
 
@@ -27,6 +34,10 @@ const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 */
 
 const numbers = [5, 7, 3]
+const numeroElevado = numbers.map((numero) =>{
+  return numero ** 2
+})
+console.log(numeroElevado)
 
 /*
   04
@@ -49,6 +60,10 @@ const tarantinoMovies = [
   { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
 
+const moviesAntesdeDoisMil = tarantinoMovies.filter(movie => movie.release < 2000)
+
+console.log(moviesAntesdeDoisMil)
+
 /*
   05
 
@@ -65,6 +80,9 @@ const tvShows = [
   { name: 'House M.D.', releaseYear: 2004 },
   { name: 'Watchmen', releaseYear: 2019 }
 ]
+
+const tvSeries = tvShows.map(serie => serie.name)
+//console.log(tvSeries)
 
 /*
   06
@@ -84,6 +102,8 @@ const cart = [
   { name: 'Resident Evil 2', price: 119.90 },
   { name: 'Death Stranding', price: 149.99 }
 ]
+const cartGames = cart.map(game => `Nome: ${game.name}`)
+//console.log(cartGames)
 
 /*
 - Nome 1
